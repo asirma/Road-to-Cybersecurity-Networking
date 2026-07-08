@@ -1,0 +1,27 @@
+Laboratorio: VLAN y Segmentación de Redes
+
+Objetivo
+
+Comprender el funcionamiento de las VLAN y cómo permiten segmentar una red física en varias redes lógicas para mejorar la organización, el rendimiento y la seguridad.
+
+Topología
+
+La práctica se realizó utilizando un switch Cisco 2960 y cuatro equipos finales distribuidos en dos VLAN:
+
+VLAN 10: PC0 y PC1
+VLAN 20: PC2 y PC3
+
+Configuración
+
+Se crearon las VLAN 10 y 20 en el switch y posteriormente se asignaron los puertos correspondientes a cada una. 
+Cada VLAN recibió una subred IP distinta para facilitar la identificación y comprobación de la segmentación.
+
+Resultados
+
+Las pruebas de conectividad demostraron que los equipos pertenecientes a la misma VLAN podían comunicarse correctamente entre sí. 
+Sin embargo, los equipos de VLAN diferentes no podían intercambiar tráfico debido a la ausencia de enrutamiento inter-VLAN.
+
+Qué he aprendido
+
+Durante este laboratorio he aprendido cómo crear VLAN en un switch Cisco, asignar puertos a diferentes segmentos de red y comprobar el aislamiento entre grupos de dispositivos. 
+También he comprendido por qué la segmentación es una medida fundamental para mejorar la seguridad y la administración de las redes corporativas.
