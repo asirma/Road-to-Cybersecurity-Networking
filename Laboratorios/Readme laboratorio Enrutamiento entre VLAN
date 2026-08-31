@@ -1,0 +1,49 @@
+Laboratorio VLAN e Inter-VLAN Routing
+
+Objetivo
+Implementar una red con dos VLAN y permitir la comunicación entre ellas mediante Inter-VLAN Routing utilizando un router.
+
+Topología
+PC0 ──┐
+PC1 ──┤ VLAN 10 ──┐
+      │            │
+      │          SWITCH ── TRUNK ── ROUTER
+      │            │
+PC2 ──┤ VLAN 20 ──┤
+PC3 ──┘
+Direccionamiento
+Equipo	VLAN	IP	            Gateway
+PC0	    10	  192.168.10.10	  192.168.10.1
+PC1	    10	  192.168.10.11	  192.168.10.1
+PC2	    20	  192.168.20.10	  192.168.20.1
+PC3	    20	  192.168.20.11	  192.168.20.1
+
+Configuración
+Se crean dos VLAN en el switch:
+vlan 10
+name vlan1
+vlan 20
+name vlan2
+Puertos:
+Fa0/1-2 → VLAN 10
+Fa0/3-4 → VLAN 20
+Fa0/24 → Trunk
+Router:
+G0/0.10 → 192.168.10.1/24
+G0/0.20 → 192.168.20.1/24
+Utilizando encapsulation dot1Q se permite transportar ambas VLAN mediante el enlace trunk.
+
+Pruebas
+PC1 → PC2: Comunicación.
+PC3 → PC4: Comunicación.
+PC1 → PC3 antes del routing: Aislados.
+PC1 → PC3 después del routing: Comunicación.
+
+Ciberseguridad
+Las VLAN permiten segmentar la red y limitar la comunicación entre departamentos. 
+En una empresa se debería permitir únicamente el tráfico necesario y restringir el acceso a redes sensibles mediante ACL y firewalls.
+Una mala configuración puede permitir accesos no autorizados y facilitar el movimiento lateral de un atacante.
+
+Conclusión
+Las VLAN mejoran la organización y segmentación de la red. 
+El Inter-VLAN Routing permite conectar diferentes VLAN de forma controlada, mientras que las ACL y los firewalls permiten aplicar las políticas de seguridad necesarias.
