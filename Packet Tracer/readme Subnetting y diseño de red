@@ -1,0 +1,71 @@
+Diseño de infraestructura de red para pequeña empresa
+Descripción
+Este proyecto presenta el diseño y la implementación de una infraestructura de red para una pequeña empresa mediante Cisco Packet Tracer.
+La propuesta busca crear una red organizada, segura y escalable, separando los diferentes tipos de usuarios, servicios y dispositivos mediante VLANs y subredes independientes.
+El diseño contempla las siguientes áreas:
+Dirección
+Administración
+Equipo técnico
+Invitados
+Servidores
+Dispositivos IoT
+
+Objetivos
+Diseñar una infraestructura de red adaptada a las necesidades de una pequeña empresa.
+Separar los diferentes departamentos mediante VLANs.
+Establecer un plan de direccionamiento IP organizado.
+Permitir la comunicación controlada entre las diferentes redes.
+Aislar los dispositivos IoT y la red de invitados.
+Mejorar la seguridad mediante segmentación de red.
+Comprobar mediante pruebas el funcionamiento de la infraestructura.
+
+Tecnologías utilizadas
+Cisco Packet Tracer
+VLAN
+IPv4
+Subnetting
+Routing inter-VLAN
+DHCP
+DNS
+Ethernet
+Dispositivos IoT
+
+Infraestructura
+La infraestructura está formada por:
+Router
+Switches
+Equipos informáticos
+Servidores
+Impresora de red
+Cámaras de seguridad
+Dispositivos IoT
+La red se encuentra segmentada mediante VLANs para evitar que todos los dispositivos pertenezcan al mismo dominio de red.
+
+Segmentación
+Cada área dispone de su propia VLAN y subred.
+Área	          VLAN	Red
+Dirección	      10	  192.168.10.0/27
+Administración	20	  192.168.10.32/27
+Equipo técnico	30	  192.168.10.64/27
+Invitados	      40	  192.168.10.96/27/27
+Servidores	    50	  192.168.10.128/27
+IoT	            60	  192.168.10.160/27
+La segmentación permite reducir el alcance de posibles incidentes y controlar mejor las comunicaciones entre los diferentes grupos.
+
+Seguridad
+La segmentación mediante VLANs permite reducir la superficie de exposición de la red.
+Especialmente, la red de Invitados y la de IoT se mantienen separadas de las redes internas de la empresa para limitar el impacto de un posible dispositivo comprometido.
+Como futuras mejoras se plantea incorporar ACLs, firewall, monitorización, autenticación de red y una mayor separación de los servicios críticos.
+
+
+Próximas mejoras
+Implementación de ACLs.
+Incorporación de firewall.
+Monitorización de la infraestructura.
+Implementación de servicios DHCP y DNS redundantes.
+Mayor segmentación de los dispositivos IoT.
+Incorporación de medidas de alta disponibilidad.
+Documentación de procedimientos de administración y respuesta ante incidentes.
+
+Finalidad
+Este proyecto forma parte del portfolio práctico de Networking y Ciberseguridad, mostrando el proceso completo de diseño, implementación, documentación y validación de una infraestructura de red empresarial.
