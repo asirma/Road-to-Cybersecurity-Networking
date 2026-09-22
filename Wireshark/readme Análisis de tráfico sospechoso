@@ -1,0 +1,53 @@
+Análisis de tráfico con Wireshark
+
+Objetivo
+Analizar una captura de tráfico utilizando Wireshark para identificar:
+Direcciones IP y comunicaciones.
+Protocolos utilizados.
+Puertos.
+Consultas DNS.
+Frecuencia de las conexiones.
+Posibles comportamientos anómalos.
+El objetivo es diferenciar entre hechos observados, interpretaciones e hipótesis, evitando afirmar la existencia de un incidente sin evidencias suficientes.
+
+Captura utilizada
+Para el laboratorio se utiliza una captura de tráfico pública destinada a prácticas de análisis con Wireshark.
+No se incluyen en el repositorio capturas procedentes de redes privadas, credenciales, información personal, direcciones internas de una organización ni otros datos sensibles.
+
+Metodología
+El análisis se ha realizado mediante Wireshark, revisando:
+Jerarquía de protocolos.
+Endpoints y conversaciones.
+Comunicaciones TCP y UDP.
+Tráfico DNS.
+Comunicaciones IRC y Skype.
+Frecuencia del tráfico mediante gráficas de E/S.
+Posibles comportamientos que requieren investigación.
+
+Hechos observados
+Se han identificado comunicaciones TCP, UDP y DNS, además de tráfico relacionado con IRC y Skype.
+También se han analizado las direcciones IP, puertos, conversaciones y frecuencia de las comunicaciones presentes en la captura.
+Los datos concretos obtenidos durante el análisis se documentan mediante capturas de pantalla y tablas, evitando publicar información personal o tráfico privado.
+
+
+Interpretaciones
+Algunas conexiones repetitivas, consultas DNS frecuentes o comunicaciones con determinados destinos pueden considerarse indicadores de interés.
+Sin embargo, una comunicación poco habitual no demuestra por sí misma la existencia de un ataque o incidente de seguridad.
+
+Hipótesis
+El tráfico observado puede contener comportamientos que requieren una investigación adicional.
+Para confirmar un posible incidente sería necesario disponer de más evidencias y contexto sobre los sistemas implicados.
+
+Información que falta
+Para continuar la investigación sería necesario disponer de:
+Inventario de equipos y servicios autorizados.
+Registros de firewall.
+Logs DNS.
+Logs de los sistemas implicados.
+Procesos y aplicaciones en ejecución.
+Histórico de conexiones.
+Línea base del comportamiento normal de la red.
+
+Conclusión
+El análisis demuestra la importancia de diferenciar entre detectar algo extraño y demostrar que existe un incidente.
+Una anomalía constituye un punto de partida para la investigación. Para determinar si existe realmente un incidente es necesario correlacionar evidencias, comprobar el contexto y obtener la información que todavía falta.
