@@ -1,0 +1,84 @@
+Uso de IA para la explicación de logs
+
+Objetivo
+Evaluar el uso de una herramienta de Inteligencia Artificial como apoyo para la interpretación inicial de un evento de seguridad de Windows.
+El objetivo no es utilizar la IA para determinar automáticamente si existe un incidente, sino analizar qué información puede aportar, qué limitaciones presenta y qué aspectos deben ser verificados manualmente por un analista.
+
+Tarea realizada
+Se utilizó una herramienta de IA para interpretar un evento de seguridad de Windows, concretamente un Event ID 4624, correspondiente a un inicio de sesión realizado correctamente.
+Se solicitó a la IA que explicara los principales campos del evento y que indicara qué información adicional sería necesario analizar para determinar si la actividad era legítima o sospechosa.
+
+Información proporcionada
+Para proteger la privacidad y evitar publicar información de una infraestructura real, se utilizó un evento anonimizado:
+Event ID: 4624
+Logon Type: 3
+Account Name: usuario_prueba
+Workstation Name: EQUIPO-PRUEBA
+Source Network Address: 192.168.1.25
+Authentication Package: NTLM
+Los nombres utilizados son ficticios y la información ha sido seleccionada únicamente con fines educativos.
+
+Resultado obtenido
+La IA explicó que:
+El Event ID 4624 indica que se produjo un inicio de sesión correcto.
+El Logon Type 3 corresponde a un inicio de sesión realizado a través de la red.
+La dirección de origen permite identificar el equipo desde el que se produjo la conexión.
+El campo de autenticación indica el mecanismo utilizado.
+El evento aislado no permite determinar que exista un incidente de seguridad.
+La IA también propuso revisar otros eventos y datos de contexto antes de determinar si la actividad era legítima o sospechosa.
+
+Limitaciones detectadas
+La principal limitación identificada es la falta de contexto.
+Un evento 4624 demuestra que se produjo una autenticación correcta, pero no demuestra por sí mismo que el acceso haya sido malicioso.
+Para realizar un análisis más completo sería necesario comprobar, entre otros elementos:
+Usuario implicado.
+Equipo de origen.
+Equipo de destino.
+Fecha y hora.
+Eventos de autenticación relacionados.
+Actividad posterior al inicio de sesión.
+Cambios de privilegios.
+Creación de cuentas.
+Ejecución de procesos o servicios.
+La IA puede interpretar los datos proporcionados, pero no conoce necesariamente el funcionamiento normal de la infraestructura analizada.
+
+Verificación manual
+La interpretación proporcionada por la IA se contrastó manualmente, especialmente:
+Significado del Event ID 4624.
+Significado del Logon Type 3.
+Función de los principales campos del evento.
+Diferencia entre una autenticación correcta y un acceso malicioso.
+La verificación permitió comprobar que un evento aislado no es suficiente para confirmar un incidente.
+
+Información que no debe publicarse
+En un entorno real no deberían introducirse en herramientas públicas ni publicarse en GitHub:
+Contraseñas.
+Tokens.
+Claves API.
+Claves privadas.
+Credenciales.
+Certificados.
+Datos personales.
+Nombres reales de usuarios.
+Direcciones IP públicas identificables.
+Dominios internos.
+Nombres reales de servidores.
+Información confidencial de clientes.
+Configuraciones internas de seguridad.
+Información sobre vulnerabilidades no divulgadas.
+Antes de utilizar un log para este tipo de actividad debe realizarse una adecuada anonimización y minimización de la información.
+
+Valor para un analista SOC
+La IA puede ser útil como herramienta de apoyo para:
+Interpretar rápidamente eventos desconocidos.
+Identificar campos relevantes.
+Explicar conceptos técnicos.
+Generar hipótesis iniciales.
+Sugerir líneas de investigación.
+Reducir el tiempo dedicado a tareas repetitivas.
+Sin embargo, la respuesta de la IA no debe considerarse una evidencia ni una conclusión definitiva.
+El analista debe verificar la información, contrastarla con fuentes fiables y correlacionarla con otros eventos.
+
+Conclusión
+Esta actividad demuestra que la IA puede acelerar la interpretación inicial de un log, pero su utilidad depende de la calidad de la información proporcionada y del contexto disponible.
+La IA debe utilizarse como herramienta de apoyo, mientras que la validación de la evidencia y la determinación de si existe realmente un incidente corresponden al proceso de análisis del profesional de seguridad.
