@@ -1,0 +1,56 @@
+Descripción
+Mini simulación profesional basada en el trabajo de un analista SOC N1.
+El ejercicio plantea tres alertas de seguridad diferentes y requiere analizar cada una separando los hechos observados, las hipótesis, la información que falta y las comprobaciones necesarias antes de tomar una decisión.
+El objetivo principal es aprender a analizar una alerta sin asumir automáticamente que existe un ciberataque.
+
+Objetivos
+Diferenciar entre hechos e hipótesis.
+Identificar qué información falta para continuar una investigación.
+Determinar qué logs y evidencias sería necesario revisar.
+Tomar una primera decisión como analista N1.
+Aprender a diferenciar entre un evento, un comportamiento sospechoso y un incidente confirmado.
+Justificar las decisiones tomadas a partir de evidencias.
+
+Alertas analizadas
+Alerta A — Intentos fallidos de inicio de sesión
+Un usuario genera 12 intentos fallidos de inicio de sesión en cinco minutos.
+Se analiza si puede tratarse de un error legítimo, un problema con credenciales almacenadas o un posible intento de acceso no autorizado.
+Decisión inicial: Continuar investigando.
+Alerta B — Dominio desconocido
+Un equipo corporativo realiza conexiones periódicas hacia un dominio que no está identificado.
+Se analiza el dominio, las consultas DNS, el proceso responsable de la conexión y el tráfico generado.
+Decisión inicial: Continuar investigando.
+Alerta C — Nuevo servicio Windows
+Se detecta la instalación de un nuevo servicio en un equipo Windows.
+Se plantea la posibilidad de que corresponda a una instalación legítima o a una modificación no autorizada del sistema.
+Decisión inicial: Continuar investigando.
+
+Metodología
+Para cada alerta se sigue la misma estructura:
+Qué sé → únicamente hechos observados.
+Qué sospecho → posibles hipótesis.
+Qué información me falta → datos necesarios para continuar.
+Qué comprobaría → logs, IP, usuario, proceso, DNS, tráfico, etc.
+Qué decisión tomaría inicialmente → cerrar, continuar investigando o escalar.
+
+Idea principal
+Una alerta no significa automáticamente que exista un ataque.
+El análisis debe seguir una progresión:
+Evento → comportamiento sospechoso → incidente confirmado
+El papel del analista N1 consiste en recopilar evidencias, comprobar hipótesis y decidir si el caso puede cerrarse, necesita más investigación o debe escalarse.
+
+Conocimientos aplicados
+Análisis de eventos.
+Logs de autenticación.
+Windows Event Viewer.
+DNS.
+Direcciones IP.
+Procesos y servicios de Windows.
+Tráfico de red.
+Análisis de comportamiento.
+Triage de alertas SOC.
+Escalado de incidentes.
+
+Aprendizaje
+Este ejercicio me ha ayudado a reforzar una idea fundamental del trabajo en un SOC: no toda alerta es un incidente.
+Antes de tomar una decisión es necesario separar lo que realmente se ha observado de lo que simplemente se sospecha y comprobar qué evidencias permiten confirmar o descartar cada hipótesis.
